@@ -1,0 +1,105 @@
+body {
+  background: var(--primary-color);
+  display: grid;
+  place-items: center;
+}
+
+.content {
+  display: flex;
+  background: var(--white);
+  width: calc(40rem - 5px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content-image {
+  width: 50%;
+  background-image: url(./images/image-product-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  padding: 2.3rem;
+  width: 50%;
+}
+
+.content-span {
+  font-family: var(--montserrat);
+  text-transform: uppercase;
+  color: var(--gray);
+  font-size: 14px;
+  letter-spacing: 3.5px;
+}
+
+.content-titulo {
+  font-family: var(--fraunces);
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.content-description {
+  font-family: var(--montserrat);
+  color: var(--gray);
+  font-size: 15px;
+}
+
+.content-prices {
+  display: flex;
+  gap: 20px;
+}
+
+.content-prices-oferta {
+  font-family: var(--fraunces);
+  color: var(--secundary-color);
+  font-size: 2rem;
+}
+
+.content-prices-price {
+  font-family: var(--montserrat);
+  color: var(--gray);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.content-add {
+  background: var(--secundary-color);
+  padding: 1rem 0;
+  border-radius: 10px;
+  color: var(--white);
+  font-family: var(--montserrat);
+  font-weight: 500;
+  font-size: 14px;
+  transition: background 0.2s ease-in-out;
+}
+
+.content-add:hover {
+  cursor: pointer;
+  background: var(--dark-blue);
+}
+
+@media (width < 750px) {
+  .content {
+    flex-direction: column;
+    width: 23rem;
+  }
+
+  .content-image {
+    background-image: url(./images/image-product-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 16.1rem;
+  }
+
+  .content-container {
+    height: 50%;
+    width: 100%;
+    padding: 1.8rem;
+    gap: 18px;
+  }
+}
